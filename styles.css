@@ -432,6 +432,41 @@
   background-position: 100% 0;
 }
 
+.or-sound-nudge {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 1.8rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #0a0a12;
+  background: linear-gradient(120deg, #ffd966, #ff8c42, #ffa3d7);
+  box-shadow: 0 12px 35px rgba(255, 140, 66, 0.45);
+  cursor: pointer;
+  z-index: 1000000;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.or-sound-nudge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 45px rgba(255, 140, 66, 0.6);
+}
+
+@media (max-width: 720px) {
+  .or-sound-nudge {
+    right: 1rem;
+    left: 1rem;
+    bottom: 1rem;
+    width: calc(100% - 2rem);
+    text-align: center;
+    letter-spacing: 0.15em;
+  }
+}
+
 @keyframes or-confetti-fall {
   0% {
     transform: translate(-50%, -15vh) rotate(0deg) scale(var(--scale));

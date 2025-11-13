@@ -125,6 +125,9 @@ let typewriterTimeouts = [];
 let rotatingTimeoutId = null;
 let rotatingIntervalId = null;
 let rotatingIndex = 0;
+let soundUnlockButton = null;
+let awaitingSoundUnlock = false;
+let pendingPointerUnlock = null;
 
 function isAcceptedVisible() {
   const badge = document.querySelector(ACCEPTED_SELECTOR);
@@ -379,6 +382,45 @@ function clearRotatingMessages() {
   }
 }
 
+function promptSoundUnlock() {
+  if (awaitingSoundUnlock) {
+    return;
+  }
+  awaitingSoundUnlock = true;
+  showSoundUnlockButton();
+  pendingPointerUnlock = () => {
+    playSoundtrack(true);
+  };
+  document.addEventListener('pointerdown', pendingPointerUnlock, { once: true });
+}
+
+function showSoundUnlockButton() {
+  if (soundUnlockButton || !document.body) {
+    return;
+  }
+  soundUnlockButton = document.createElement('button');
+  soundUnlockButton.type = 'button';
+  soundUnlockButton.className = 'or-sound-nudge';
+  soundUnlockButton.textContent = 'Enable hype soundtrack';
+  soundUnlockButton.addEventListener('click', (event) => {
+    event.stopPropagation();
+    playSoundtrack(true);
+  });
+  document.body.appendChild(soundUnlockButton);
+}
+
+function hideSoundUnlockButton() {
+  awaitingSoundUnlock = false;
+  if (pendingPointerUnlock) {
+    document.removeEventListener('pointerdown', pendingPointerUnlock);
+    pendingPointerUnlock = null;
+  }
+  if (soundUnlockButton) {
+    soundUnlockButton.remove();
+    soundUnlockButton = null;
+  }
+}
+
 function ensureSoundtrack() {
   if (!soundtrackAudio) {
     soundtrackAudio = new Audio(chrome.runtime.getURL(SOUNDTRACK_PATH));
@@ -388,14 +430,20 @@ function ensureSoundtrack() {
   return soundtrackAudio;
 }
 
-function playSoundtrack() {
+function playSoundtrack(fromUserUnlock = false) {
   const audio = ensureSoundtrack();
   audio.currentTime = 0;
   const playPromise = audio.play();
-  if (playPromise && typeof playPromise.catch === 'function') {
-    playPromise.catch(() => {
-      // Autoplay might be blocked until the user interacts with the page.
-    });
+  if (playPromise && typeof playPromise.then === 'function') {
+    playPromise
+      .then(() => {
+        hideSoundUnlockButton();
+      })
+      .catch(() => {
+        if (!fromUserUnlock) {
+          promptSoundUnlock();
+        }
+      });
   }
 }
 
@@ -404,6 +452,7 @@ function stopSoundtrack() {
     soundtrackAudio.pause();
     soundtrackAudio.currentTime = 0;
   }
+  hideSoundUnlockButton();
 }
 
 function handleStateChange() {
@@ -438,29 +487,7 @@ function handleStateChange() {
   }
 }
 
-function installObserver() {
-  if (!document.body) {
-    return;
-  }
-
-  const observer = new MutationObserver(() => {
-    handleStateChange();
-  });
-
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true,
-    characterData: true
-  });
-
-  handleStateChange();
-}
-
 function startDocsDemo() {
-  if (celebrationTimerId) {
-    clearTimeout(celebrationTimerId);
-  }
-
   celebrationScheduled = true;
   celebrationTimerId = setTimeout(() => {
     celebrationTimerId = null;
