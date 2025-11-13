@@ -1,0 +1,92 @@
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+  background: radial-gradient(circle at top, #1c1240, #05060d);
+  color: #f3f3ff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem 4rem;
+}
+
+.demo-layout {
+  width: min(960px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+header p {
+  margin: 0.35rem 0 0;
+  opacity: 0.8;
+}
+
+.demo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+#demo-trigger {
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #0b0b12;
+  background: linear-gradient(120deg, #ffd966, #ff8c42, #ffa3d7);
+  cursor: pointer;
+  box-shadow: 0 15px 40px rgba(255, 140, 66, 0.35);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+#demo-trigger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(255, 140, 66, 0.55);
+}
+
+.demo-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+}
+
+.demo-stage {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  min-height: 480px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.demo-stage-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.05), transparent 50%),
+    radial-gradient(circle at 30% 20%, rgba(255, 217, 102, 0.18), transparent 45%),
+    radial-gradient(circle at 70% 30%, rgba(117, 251, 253, 0.18), transparent 50%),
+    rgba(3, 5, 24, 0.85);
+  filter: blur(0);
+}
+
+footer {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  text-align: center;
+}

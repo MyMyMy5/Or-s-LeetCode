@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Or's LeetCode Hype Squad",
+  "description": "Explodes confetti and yells encouragement when LeetCode says Accepted.",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://leetcode.com/*",
+        "https://*.leetcode.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "OriginalSong.mp3"
+      ],
+      "matches": [
+        "https://leetcode.com/*",
+        "https://*.leetcode.com/*"
+      ]
+    }
+  ]
+}
