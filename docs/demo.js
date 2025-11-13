@@ -1,4 +1,4 @@
-(() => {
+ï»¿(() => {
   const SOUNDTRACK_PATH = '../OriginalSong.mp3';
   const ROTATING_MESSAGES = [
     'Breaking: Or Shmuelof just solved bugs that were still in brainstorming.',
@@ -14,24 +14,24 @@
 Ohhh Or Shmuelof,
 Lisa on the left and you sat on my right,
 Calculus one, first sight, first light,
-Didn’t know that math could feel this bright…
+Didnï¿½t know that math could feel this brightï¿½
 
 [Verse 1]
 We were lost in limits, pages full of scribbles,
 You dropped your bag, we laughed at all the symbols,
 Lisa in the middle, you slid into the row,
-“Is this seat free?” and suddenly the time slowed.
+ï¿½Is this seat free?ï¿½ and suddenly the time slowed.
 
-Now it’s Infi nights, coffee, deadlines,
+Now itï¿½s Infi nights, coffee, deadlines,
 Linear algebra and highlighted lines,
 Matrices dancing in your eyes when you say,
-“Wait, is this a list or an array?”
+ï¿½Wait, is this a list or an array?ï¿½
 
 [Pre-Chorus]
-You joke I’ve got a math cheat code,
+You joke Iï¿½ve got a math cheat code,
 Open Uni stories that I always reload,
-“Discrete math boy,” yeah, you tease me nonstop,
-But we’re passing every test, we’re leveling up.
+ï¿½Discrete math boy,ï¿½ yeah, you tease me nonstop,
+But weï¿½re passing every test, weï¿½re leveling up.
 
 [Chorus]
 Two Sum, one win, we just cracked the code,
@@ -40,31 +40,31 @@ From Calculus one to arrays on the screen,
 You and me debugging like a power team.
 
 Two Sum, one vibe, add our laughs, they flow,
-Or Shmuelof shining like a status “in glow,”
-From “what’s a matrix?” to “I solved it, look!”
+Or Shmuelof shining like a status ï¿½in glow,ï¿½
+From ï¿½whatï¿½s a matrix?ï¿½ to ï¿½I solved it, look!ï¿½
 We just rewrote the ending of the textbook.
 
 [Verse 2]
 You tried to pay me weekly for the questions you ask,
-But friendship’s not a job, it’s not an hourly task,
-So I said “Keep your money, I’ve got a better deal,”
-Bring me ??????, that’s how we seal it real.
+But friendshipï¿½s not a job, itï¿½s not an hourly task,
+So I said ï¿½Keep your money, Iï¿½ve got a better deal,ï¿½
+Bring me ??????, thatï¿½s how we seal it real.
 
 Sipping tiny bottles while we fight through the proofs,
 Vectors on the table, dreams under the roof,
-You say, “He’s good at math, you know what I mean?
-He took discrete at the Open University!”
+You say, ï¿½Heï¿½s good at math, you know what I mean?
+He took discrete at the Open University!ï¿½
 
-And I laugh ’cause you’re quoting my flex as a meme,
-But that’s our inside joke, part of the team,
+And I laugh ï¿½cause youï¿½re quoting my flex as a meme,
+But thatï¿½s our inside joke, part of the team,
 From sigma signs to graphs in the night,
 We turn every problem into neon light.
 
 [Pre-Chorus]
-You joke I’ve got a math cheat code,
+You joke Iï¿½ve got a math cheat code,
 Open Uni stories that I always reload,
-“Discrete math boy,” yeah, you tease me nonstop,
-But we’re passing every test, we’re leveling up.
+ï¿½Discrete math boy,ï¿½ yeah, you tease me nonstop,
+But weï¿½re passing every test, weï¿½re leveling up.
 
 [Chorus]
 Two Sum, one win, we just cracked the code,
@@ -73,44 +73,44 @@ From Calculus one to arrays on the screen,
 You and me debugging like a power team.
 
 Two Sum, one vibe, add our laughs, they flow,
-Or Shmuelof shining like a status “in glow,”
-From “what’s a matrix?” to “I solved it, look!”
+Or Shmuelof shining like a status ï¿½in glow,ï¿½
+From ï¿½whatï¿½s a matrix?ï¿½ to ï¿½I solved it, look!ï¿½
 We just rewrote the ending of the textbook.
 
 [Bridge]
-Index by index, we’re closing the gap,
+Index by index, weï¿½re closing the gap,
 Checking each value on this crazy map,
-When the logic feels wrong and the bugs don’t quit,
+When the logic feels wrong and the bugs donï¿½t quit,
 We just shift our pointers and refactor it.
 
 And when that first green checkmark finally appears,
-We’ll raise our ?????? bottles, cheer to all these years,
-“From Calculus to coding, we’ve come so far,”
-You solved Two Sum, girl, you’re a superstar.
+Weï¿½ll raise our ?????? bottles, cheer to all these years,
+ï¿½From Calculus to coding, weï¿½ve come so far,ï¿½
+You solved Two Sum, girl, youï¿½re a superstar.
 
 [Breakdown / Chant]
 O-O-Or Shmuelof, light up the room,
-Every little victory goes “boom, boom, boom,”
+Every little victory goes ï¿½boom, boom, boom,ï¿½
 Lisa in the back with the clapping hands,
-Study-group legends, we don’t need a band.
+Study-group legends, we donï¿½t need a band.
 
 [Final Chorus]
 Two Sum, one win, yeah, you owned that fight,
-First LeetCode down, now the future’s in sight,
+First LeetCode down, now the futureï¿½s in sight,
 From limits and lines to the code we run,
 You plus me is the perfect sum.
 
 Two Sum, one vibe, put this song on repeat,
 Let the campus hear our victory beat,
-From “what’s an array?” to “I’m in the zone,”
-Or, tonight you’re in a league of your own.
+From ï¿½whatï¿½s an array?ï¿½ to ï¿½Iï¿½m in the zone,ï¿½
+Or, tonight youï¿½re in a league of your own.
 
 [Outro]
 Ohhh Or Shmuelof,
-This is our proof, it’s more than a grade,
-Friends, math, aktimel — memories we made,
+This is our proof, itï¿½s more than a grade,
+Friends, math, aktimel ï¿½ memories we made,
 Hit that run button, watch the test cases fly,
-Two Sum solved, and we’re dancing under Pi. ??
+Two Sum solved, and weï¿½re dancing under Pi. ??
 `;
 
   let soundtrackAudio = null;
@@ -394,13 +394,12 @@ Two Sum solved, and we’re dancing under Pi. ??
   }
 
   const triggerButton = document.getElementById('demo-trigger');
-  const autoplayCheckbox = document.getElementById('demo-autoplay');
 
   if (triggerButton) {
     triggerButton.addEventListener('click', triggerCelebration);
   }
 
-  if (autoplayCheckbox && autoplayCheckbox.checked) {
-    setTimeout(triggerCelebration, 800);
-  }
+  window.addEventListener('load', () => {
+    setTimeout(triggerCelebration, 600);
+  });
 })();
