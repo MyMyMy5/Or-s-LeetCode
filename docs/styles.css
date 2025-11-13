@@ -456,7 +456,66 @@
   box-shadow: 0 16px 45px rgba(255, 140, 66, 0.6);
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
+  #or-celebration-overlay {
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+
+  .or-celebration-inner {
+    width: 100%;
+    max-width: none;
+    padding: 2.5rem 1.5rem;
+    border-radius: 26px;
+  }
+
+  .or-celebration-inner::before {
+    border-radius: 26px;
+  }
+
+  .or-ribbon {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+  }
+
+  .or-headline {
+    font-size: clamp(2rem, 7vw, 3rem);
+  }
+
+  .or-subline {
+    font-size: clamp(1rem, 3.6vw, 1.3rem);
+  }
+
+  .or-storyline {
+    font-size: 0.95rem;
+    margin-inline: auto;
+  }
+
+  .or-rotating {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .or-rotating-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+  }
+
+  .or-rotating-message {
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    max-width: 100%;
+  }
+
+  .or-lyrics-panel {
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .or-celebration-close {
+    width: 100%;
+  }
+
   .or-sound-nudge {
     right: 1rem;
     left: 1rem;
@@ -464,6 +523,33 @@
     width: calc(100% - 2rem);
     text-align: center;
     letter-spacing: 0.15em;
+  }
+}
+
+@media (max-width: 540px) {
+  #or-celebration-overlay {
+    padding: 1rem;
+  }
+
+  .or-celebration-inner {
+    padding: 2rem 1.25rem;
+  }
+
+  .or-headline {
+    font-size: clamp(1.7rem, 9vw, 2.4rem);
+  }
+
+  .or-storyline {
+    font-size: 0.9rem;
+  }
+
+  .or-tagline {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+  }
+
+  .or-lyrics-panel:not(.collapsed) .or-lyrics-body {
+    max-height: 240px;
   }
 }
 
