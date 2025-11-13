@@ -4,17 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Or's LeetCode Hype Squad — Demo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=JetBrains+Mono&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="demo.css" />
   </head>
   <body class="demo-body">
-    <button id="demo-trigger" class="demo-replay" type="button">Replay Celebration</button>
-    <script src="demo.js"></script>
+    <span class="demo-accepted-marker" data-e2e-locator="submission-result">Accepted</span>
+    <script>
+      window.chrome = window.chrome || {};
+      window.chrome.runtime = window.chrome.runtime || { getURL: (path) => path };
+    </script>
+    <script defer src="content.js"></script>
   </body>
 </html>

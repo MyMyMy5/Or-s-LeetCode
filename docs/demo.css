@@ -1,54 +1,20 @@
-:root {
-  color-scheme: dark;
-}
-
 body.demo-body {
   margin: 0;
   min-height: 100vh;
-  background: radial-gradient(circle at 25% 15%, rgba(255, 217, 102, 0.35), transparent 55%),
-    radial-gradient(circle at 75% 20%, rgba(117, 251, 253, 0.25), transparent 60%),
-    linear-gradient(120deg, rgba(5, 10, 40, 0.92), rgba(14, 8, 36, 0.95));
-  font-family: 'Poppins', 'Segoe UI', system-ui, sans-serif;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 217, 102, 0.35), transparent 55%),
+    radial-gradient(circle at 80% 25%, rgba(117, 251, 253, 0.25), transparent 60%),
+    linear-gradient(120deg, rgba(5, 10, 40, 0.92), rgba(14, 8, 36, 0.96));
+  font-family: 'Poppins', 'Segoe UI', system-ui, sans-serif;
   padding: 2rem;
-  position: relative;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
-.demo-replay {
-  position: fixed;
-  right: 1.75rem;
-  bottom: 1.75rem;
-  border: none;
-  border-radius: 999px;
-  padding: 0.85rem 1.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: #0b0b12;
-  background: linear-gradient(120deg, #ffd966, #ff8c42, #ffa3d7);
-  cursor: pointer;
-  box-shadow: 0 12px 30px rgba(255, 140, 66, 0.4);
-  transition: transform 200ms ease, box-shadow 200ms ease;
-  z-index: 1000000;
-}
-
-.demo-replay:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 40px rgba(255, 140, 66, 0.55);
-}
-
-@media (max-width: 720px) {
-  body.demo-body {
-    padding: 1rem;
-  }
-
-  .demo-replay {
-    right: 1rem;
-    bottom: 1rem;
-    width: calc(100% - 2rem);
-    text-align: center;
-  }
+.demo-accepted-marker {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
